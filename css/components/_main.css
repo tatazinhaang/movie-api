@@ -1,0 +1,55 @@
+main {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.movie {
+    width: 300px;
+    margin: 1rem;
+    background-color: var(--primary-color);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.movie img {
+    width: 100%;  
+}
+
+.movie-info {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0.5rem 1rem 1rem;
+    color: var(--secondary-color);
+    letter-spacing: 1px;
+    background-color: #033f3f;
+}
+
+.movie-info h3 {
+    margin-top: 0;
+    font-weight: 500;
+}
+
+.movie-info span {
+    padding: 0.25rem 0.5rem;
+    font-weight: 500;
+    border-radius: 3px;
+    background-color: #1066857c;
+}
+
+.movie-info span.green {
+    color: #64ff649d;
+
+}
+
+.movie-info span.orange {
+    color: orange;
+}
+
+.movie-info span.red {
+    color: red;
+}
+
+

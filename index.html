@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Movie API</title>
+</head>
+<body>
+    <header>
+        <form id="form">
+            <input type="text" placeholder="Search Movie..." id="search" class="search">
+        </form>
+    </header>
+    <div id="tags"></div>
+    <div id="myNav" class="overlay">
+        <a class="closeBtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content" id="overlay-content"></div>
+        <a class="arrow left-arrow" id="left-arrow">&#8656;</a> 
+        <a class="arrow right-arrow" id="right-arrow" >&#8658;</a>
+    </div>
+    <main id="main"></main>
+    <div class="pagination">
+        <div class="page" id="prev">Previous Page</div>
+        <div class="current" id="current">1</div>
+        <div class="page" id="next">Next Page</div>
+    </div>
+    
+    <script src="js/main.js"></script>
+    <script src="js/overlay.js"></script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+header {
+    display: flex;
+    justify-content: center;
+    padding: 1rem;
+    background-color: var(--primary-color);
+}
+
+header .search {
+    background-color: transparent;
+    border: 1px solid var(--secondary-color);
+    border-radius: 10px;
+    padding: 0.8rem;
+    font-size: 1rem;
+    color: var(--secondary-color);
+    outline: none;
+    width: 40vw;
+}
+
+.search:focus{
+    outline:0;
+    background-color: var(--primary-color);
+}
+
+.search::placeholder {
+    color: var(--secondary-color);
+}
