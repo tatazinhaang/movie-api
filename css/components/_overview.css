@@ -4,11 +4,13 @@
     right: 0;
     bottom: 0;
     max-height: 100%;
-    padding: 0.5rem;
+    padding: 0.8rem;
     background-color: #0a6860fd;
-    color: var(--primary-color);
+    color: var(--secondary-color);
+    font-size: 0.9rem;
     transform: translateY(101%);
     transition: transform 0.5s ease-in;
+    letter-spacing: 1px;
 }
 
 .movie:hover .overview {
@@ -18,11 +20,32 @@
 .overview h3 {
     color: var(--secondary-color);
     text-align: center;
-    font-size: 1.3rem;
+    font-size: 1.5rem;
     font-weight: 700;
     letter-spacing: 1px;
+    margin-bottom: 5px;
 }
 
 .overview span {
     color: var(--secondary-color);
+}
+
+.favorite {
+    height: 5vh;
+    position: relative;
+}
+
+.favorite:hover::after,
+.favorite.fav::after {
+    content: '\2605';
+    color: #dd7b0c;
+    position: absolute;
+    top: 0;
+    left: 230px;
+    margin-top: -15px;
+    font-size: 3rem;
+}
+
+.favorite.fav:hover:after {
+    content: '\2606';
 }

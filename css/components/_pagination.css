@@ -24,20 +24,6 @@
     font-weight: 600;
 }
 
-.play {
-    background-color: var(--button-color);
-    color: var(--secondary-color);
-    font-size: 16px;
-    font-weight: bold;
-    border:0;
-    border-radius: 50px;
-    padding: 8px 10px;
-    margin: 5px 0 0 70px;
-    cursor: pointer;
-    display: block;
-    width: 50%;
-}
-
 .left-arrow, .right-arrow {
     cursor: pointer;
 }

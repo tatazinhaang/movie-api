@@ -195,6 +195,7 @@ function getMovies(url) {
           main.innerHTML = `<h1 class="no-results"> No Results Found</h1>`
         }
     });
+
 }
 
 function showMovies(data) {
@@ -214,14 +215,13 @@ function showMovies(data) {
           <div class="overview">
             <h3>Overview</h3>
             ${overview}
-            <button class="play" id="${id}">PLAY</button>
+            <div class="favorite" id="${id}"></div>
           </div>
 
     `
     main.appendChild(movieEl);
 
     document.getElementById(id).addEventListener('click', () => {
-      console.log(id);
       openNav(movie);
     });
   });
@@ -248,7 +248,6 @@ form.addEventListener('submit', (e) => {
     getMovies(apiUrl);
   }
 });
-
 
 // Funções de paginação
 prev.addEventListener('click', () => {

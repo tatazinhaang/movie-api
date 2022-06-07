@@ -1,4 +1,4 @@
-.overlay {
+/* .overlay {
     height: 100%;
     width: 0;
     position: fixed; 
@@ -15,17 +15,16 @@
     top: 10%; 
     width: 100%; 
     text-align: center; 
-    margin-top: 3rem;
+    margin-top: 30px;
   }
   
   .overlay a {
-    padding: 0.8rem;
+    padding: 8px;
     text-decoration: none;
     font-size: 36px;
-    color: #818181;
+    color: #e4d6d6;
     display: block; 
     transition: 0.3s; 
-    border: none;
   }
   
   .overlay a:hover, .overlay a:focus {
@@ -34,8 +33,52 @@
   
   .overlay .closeBtn {
     position: absolute;
-    top: 2rem;
-    right: 4.5rem;
-    font-size: 6rem;
+    top: 20px;
+    right: 45px;
+    font-size: 4rem;
     cursor: pointer;
   }
+
+  .embed.hide {
+    display: none;
+  }
+
+  .embed.show {
+    display: inline-block;
+  }
+
+  .arrow {
+    position: absolute;
+    font-size: 40px;
+  }
+
+  .arrow.left-arrow {
+    top: 50%;
+    left: 5%;
+    transform: translateY(-50%);
+  }
+
+  .arrow.right-arrow {
+    top: 50%;
+    right: 5%;
+    transform: translateY(-50%);
+  }
+
+  .dots {
+    display: none;
+    margin-top: 30px;
+  }
+
+  .dots .dot {
+    padding: 5px 15px;
+    border-radius: 50%;
+    border: 5px solid var(--secondary-color);
+    color: var(--secondary-color);
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 5px;
+}
+
+.dots .dot.active{
+    border-color: orange;
+} */
