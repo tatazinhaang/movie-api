@@ -56,6 +56,7 @@ function showVideos() {
             embedTag.classList.add('hide');
             embedTag.classList.remove('show');
         }
+        getMovies(apiUrl)
     });
 
     dots.forEach((dot, index) => {
@@ -87,3 +88,5 @@ rightArrow.addEventListener('click', () => {
     }
     showVideos()
 });
+
+showVideos()
