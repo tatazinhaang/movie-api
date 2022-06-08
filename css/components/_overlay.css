@@ -5,9 +5,10 @@
   z-index: 1; 
   left: 0;
   top: 0;
-  background-color: #022836c2;
+  background-color: #022836ef;
   overflow-x: hidden; 
   transition: 0.5s; 
+  z-index: 1000;
 }
   
 .overlay-content {
@@ -26,6 +27,7 @@
   display: block; 
   transition: 0.3s; 
 }
+
   
 .overlay a:hover, .overlay a:focus {
   color: #f1f1f1;
@@ -35,6 +37,7 @@
   position: absolute;
   top: 20px;
   right: 45px;
+  cursor: pointer;
 }
   
 .embed.hide {
@@ -56,6 +59,7 @@
   transform: translateY(-50%);
   color: var(--arrow-color);
   background-color: var(--arrow-background);
+  cursor: pointer;
 }
 
 .arrow.right-arrow {
@@ -64,23 +68,25 @@
   right: 5%;
   color: var(--arrow-color);
   background-color: var(--arrow-background);
+  cursor: pointer;
 }
 
 .dots {
   margin-top: 50px;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .dots .dot {
-  padding: 5px;
-  border-radius: 50%;
-  border: 3px solid var(--secondary-color);
+  padding: 10px;
+  margin-left: 10px;
   color: var(--secondary-color);
-  font-size: 12px;
+  font-size: 1rem;
   font-weight: 700;
 }
 
 .dots .dot.active{
-  border-color: var(--button-color);
+  background-color: var(--button-color);
 }
 
 .no-results {

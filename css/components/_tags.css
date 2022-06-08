@@ -1,4 +1,4 @@
-#tags{
+#tags {
     width: 80%;
     display:flex;
     flex-wrap: wrap;
@@ -7,7 +7,7 @@
     margin: 10px auto;
 }
 
-.tag{
+.tag {
     padding: 10px 15px;
     background-color: var(--button-color);
     border-radius: 50px;
@@ -20,7 +20,7 @@
     font-size: 0.8rem;
 }
 
-.tag.highlight{
+.tag.highlight {
     background-color: #00c3ff88;
 }
 
