@@ -1,0 +1,12 @@
+.favoriteImage {
+    font-size: 0.2rem;
+    width: 1.5rem;
+    margin-left: -50px;
+    margin-bottom: 455px;
+    z-index: 1;
+    cursor: pointer;
+}
+
+input[type="checkbox"] {
+    display: none;
+}

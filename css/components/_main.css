@@ -2,6 +2,7 @@ main {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
+    position: relative;
 }
 
 .movie {
@@ -11,6 +12,7 @@ main {
     border-radius: 3px;
     overflow: hidden;
     position: relative;
+    padding: 0.2rem;
 }
 
 .movie img {

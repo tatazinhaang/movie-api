@@ -92,6 +92,8 @@ const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 const current = document.getElementById('current');
 
+const checkInput = document.querySelector('input[type="checkbox"]');
+
 let currentPage = 1;
 let nextPage = 2;
 let prevPage = 3;
@@ -200,6 +202,13 @@ function showMovies(data) {
   main.innerHTML = '';
   data.forEach(movie => {
     const {title, poster_path, vote_average, overview, id} = movie;
+    
+    const isFavorited = LocalStorage.checkFavorite(id);
+    const favoriteImage = document.createElement('img');
+    favoriteImage.src = isFavorited ? 'imagens/heart-fill.svg' : 'imagens/heart.svg';
+    favoriteImage.classList.add('favoriteImage');
+    favoriteImage.addEventListener('click', (event) => favoriteStorage(event, movie));
+    
     const movieEl = document.createElement('div');
     movieEl.classList.add('movie');
     movieEl.innerHTML = `
@@ -213,14 +222,30 @@ function showMovies(data) {
             ${overview}
             <button class="play" id="${id}">PLAY</button>
           </div>
+         
     `
-      main.appendChild(movieEl);
-      
+    main.appendChild(movieEl);
+    main.appendChild(favoriteImage)
+    
       document.getElementById(id).addEventListener('click', () => {
         console.log(id)
         openNav(movie);
-      })
+      });
   });
+}
+
+function favoriteStorage(event, movie) {
+  const favoriteState = {
+    favorited: 'imagens/heart-fill.svg',
+    notFavorited: 'imagens/heart.svg'
+  }
+  if(event.target.src.includes(favoriteState.notFavorited)) {
+    event.target.src = favoriteState.favorited;
+    LocalStorage.saveLocalStorage(movie)
+  } else {
+    event.target.src = favoriteState.notFavorited;
+    LocalStorage.removeFromLocalStorage(movie.id);
+  }
 }
 
 function getColor(vote) {
@@ -232,18 +257,6 @@ function getColor(vote) {
     return 'red';
   }
 }
-
-form.addEventListener('submit', (e) => {
-  e.preventDefault();
-  
-  const searchValue = search.value;
-  selectedGenre = [];
-  if(searchValue) {
-    getMovies(searchUrl + '&query=' + searchValue)
-  } else {
-    getMovies(apiUrl);
-  }
-});
 
 
 

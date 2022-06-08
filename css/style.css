@@ -1,9 +1,11 @@
 @import url('_reset.css');
 @import url('_global.css');
 @import url('components/_header.css');
+@import url('components/_tags.css');
 @import url('components/_overlay.css');
 @import url('components/_main.css');
-@import url('components/_tags.css');
-@import url('components/_pagination.css');
 @import url('components/_overview.css');
+@import url('components/_pagination.css');
+@import url('components/_favorite.css');
+
 
