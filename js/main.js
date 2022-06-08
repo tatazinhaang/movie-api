@@ -120,9 +120,8 @@ function setMoviesGenre() {
                     });
                 } else {
                     selectedGenre.push(genre.id);
-                }
+                  }
             }
-            console.log(selectedGenre);
             getMovies(apiUrl + '&with_genres=' + encodeURI(selectedGenre.join(',')));
             highlightSelection()
         });
@@ -195,7 +194,6 @@ function getMovies(url) {
           main.innerHTML = `<h1 class="no-results"> No Results Found</h1>`
         }
     });
-
 }
 
 function showMovies(data) {
@@ -206,24 +204,22 @@ function showMovies(data) {
     movieEl.classList.add('movie');
     movieEl.innerHTML = `
           <img src="${poster_path? imagePath+poster_path: "http://via.placeholder.com/1080x1580"}" alt="${title}">
-
           <div class="movie-info">
             <h3>${title}</h3>
             <span class="${getColor(vote_average)}">${vote_average}</span>
           </div>
-
           <div class="overview">
             <h3>Overview</h3>
             ${overview}
-            <div class="favorite" id="${id}"></div>
+            <button class="play" id="${id}">PLAY</button>
           </div>
-
     `
-    main.appendChild(movieEl);
-
-    document.getElementById(id).addEventListener('click', () => {
-      openNav(movie);
-    });
+      main.appendChild(movieEl);
+      
+      document.getElementById(id).addEventListener('click', () => {
+        console.log(id)
+        openNav(movie);
+      })
   });
 }
 
@@ -249,38 +245,5 @@ form.addEventListener('submit', (e) => {
   }
 });
 
-// Funções de paginação
-prev.addEventListener('click', () => {
-  if(prevPage > 0) {
-    pageCall(prevPage);
-  }
-});
-
-next.addEventListener('click', () => {
-  if(nextPage <= totalPages) {
-    pageCall(nextPage);
-  }
-});
-
-function pageCall(page) {
-  const urlPage = lastUrl.split('?');
-  const querys = urlPage[1].split('&');
-  const key = querys[querys.length - 1].split('=');
-
-  if(key[0] != 'page') {
-    let url = lastUrl + '&page=' + page;
-    getMovies(url);
-  } else {
-    key[1] = page.toString();
-    let a = key.join('=');
-    querys[querys.length -1] = a;
-    let b = querys.join('&');
-    let url = urlPage[0] +'?'+ b
-    
-    getMovies(url);
-  }
-}
 
 
-
-  

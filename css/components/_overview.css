@@ -30,22 +30,23 @@
     color: var(--secondary-color);
 }
 
-.favorite {
-    height: 5vh;
-    position: relative;
+.play {
+    background-color: var(--button-color);
+    display: block;
+    color: var(--secondary-color);
+    font-size: 1.1rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    margin-top: 5px;
+    cursor: pointer;
+    margin: 10px 0 0 50px;
+    width: 150px;
+    letter-spacing: 2px;
+    transition: 0.2s ease-in;
 }
 
-.favorite:hover::after,
-.favorite.fav::after {
-    content: '\2605';
-    color: #dd7b0c;
-    position: absolute;
-    top: 0;
-    left: 230px;
-    margin-top: -15px;
-    font-size: 3rem;
-}
-
-.favorite.fav:hover:after {
-    content: '\2606';
+.play:hover {
+    background-color: #17ffe0c5;
 }

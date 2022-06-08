@@ -14,6 +14,12 @@
         </form>
     </header>
     <div id="tags"></div>
+    <div id="myNav" class="overlay">
+        <a href="#" class="closeBtn" onclick="closeNav()">&times;</a>
+        <div class="overlay-content" id="overlay-content"></div>
+        <a href="#" class="arrow left-arrow" id="left-arrow">&#8656;</a> 
+        <a href="#" class="arrow right-arrow" id="right-arrow" >&#8658;</a>
+    </div>
     <main id="main"></main>
     <div class="pagination">
         <div class="page disabled" id="prev">Previous Page</div>
@@ -22,5 +28,7 @@
     </div>
     
     <script src="js/main.js"></script>
+    <script src="js/overlay.js"></script>
+    <script src="js/pagination.js"></script>
 </body>
 </html>
