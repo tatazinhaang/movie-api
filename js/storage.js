@@ -1,5 +1,4 @@
 checkInput.addEventListener('change', checkboxStatus);
-console.log(checkInput)
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const searchValue = search.value;
@@ -46,10 +45,26 @@ function removeFromLocalStorage(id) {
   localStorage.setItem(localStorage, JSON.stringify(movies));
 }
 
+
+function favoriteStorage(event, movie) {
+  const favoriteState = {
+    favorited: 'imagens/heart-fill.svg',
+    notFavorited: 'imagens/heart.svg'
+  }
+  if(event.target.src.includes(favoriteState.notFavorited)) {
+    event.target.src = favoriteState.favorited;
+    LocalStorage.saveLocalStorage(movie)
+  } else {
+    event.target.src = favoriteState.notFavorited;
+    LocalStorage.removeFromLocalStorage(movie.id);
+  }
+}
+
 const LocalStorage = {
   getFavoriteMovies,
   saveLocalStorage,
   checkFavorite,
-  removeFromLocalStorage
+  removeFromLocalStorage,
+  favoriteStorage
 }
 

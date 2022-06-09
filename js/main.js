@@ -171,7 +171,6 @@ function getMovies(url) {
     fetch(url)
     .then(response => response.json())
     .then(data => {
-        console.log(data.results);
         if(data.results.length !== 0) {
           showMovies(data.results);
           currentPage = data.page;
@@ -234,19 +233,6 @@ function showMovies(data) {
   });
 }
 
-function favoriteStorage(event, movie) {
-  const favoriteState = {
-    favorited: 'imagens/heart-fill.svg',
-    notFavorited: 'imagens/heart.svg'
-  }
-  if(event.target.src.includes(favoriteState.notFavorited)) {
-    event.target.src = favoriteState.favorited;
-    LocalStorage.saveLocalStorage(movie)
-  } else {
-    event.target.src = favoriteState.notFavorited;
-    LocalStorage.removeFromLocalStorage(movie.id);
-  }
-}
 
 function getColor(vote) {
   if(vote >= 8) {
