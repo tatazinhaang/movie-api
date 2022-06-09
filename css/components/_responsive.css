@@ -1,3 +1,56 @@
+@media(max-width:1024px) {
+    header .search {
+        width: 70vw;
+    }
+
+    .movie-info h3 {
+        padding-left: 10px;
+    }
+
+    .overlay-content {
+        margin-top: -20px;
+    }
+
+    .dots .dot {
+        font-size: 1.2rem;
+        margin-left: 20px;
+    }
+}
+
+@media(max-width:768px) {
+    header .search {
+        width: 70vw;
+    }
+
+    .overlay-content {
+        top: 10%;
+    }
+
+    .overlay a {
+        font-size: 4rem;
+    }
+    
+    .arrow.left-arrow {
+        top: 50%;
+        padding: 2px;
+    }
+
+    .arrow.right-arrow {
+        top: 50%;
+        padding: 2px;
+    }
+
+    iframe {
+        width: 480px;
+        margin-top: 10%;
+    }
+
+    .dots .dot {
+        font-size: 1.2rem;
+        margin-left: 20px;
+    }
+}
+
 @media(max-width: 640px) {
     header .search {
        width: 70vw;
@@ -20,39 +73,147 @@
     }
 }
 
-@media(max-width: 320px) {
+@media(max-width: 390px) {
     header .search {
-        width: 80vw;
+        width: 70vw;
+        margin: 10px 50px 0 0;
     }
     
     #tags {
         width: 90%;
+        margin-right: 100px;
     }
 
-    .tag {
-        padding: 6px 8px;
+   .tag {
+        padding: 5px 7px;
     }
 
-    .movie img {
-        width: 98.5%;
+    main {
+        width: 85%;
     }
+
+    .movie-info h3 {
+        padding-left: 10px;
+        font-size: 1rem;
+    }
+
+    .overlay-content {
+        top: 15%;
+    }
+
+    .dots .dot {
+        font-size: 0.9rem;
+    }
+
     .no-results {
-        font-size: 1.2rem;
+        font-size: 1rem;
+        margin: 30px 30px 0 0;
     }
 
     iframe {
         width: 290px;
-        height: 290px;
+        height: 270px;
+        margin: 12px 30px 0 0;
     }
 
     .arrow.left-arrow {
-        top: 20%;
-        background-color: transparent;
+        top: 15%;
+        padding: 2px;
     }
 
     .arrow.right-arrow {
-        top: 20%;
-        background-color: transparent;
+        top: 15%;
+        padding: 2px;
+        margin-right: 40px;
+    }
+}
+
+@media(max-width: 320px) {
+    header .search {
+        width: 80vw;
+        margin-left: 50px;
+    }
+    
+    #tags {
+        width: 90%;
+        margin-left: 20px;
+    }
+
+    .tag {
+       font-size: 0.5rem;
+       padding: 6px 8px;
+    }
+
+    main {
+        width: 100%;
+    }
+
+    .movie {
+        margin-right: 50px;
+    }
+
+    .movie img {
+        width: 90%;
+    }
+
+    .movie-info {
+        width: 82vw;
+    }
+
+    .movie-info h3 {
+        padding-left: 10px;
+        font-size: 1rem;
+    }
+
+    .overview {
+        width: 90%;
+        height: 40vh;
+        font-size: 0.8rem;
+    }
+
+    .overview h3 {
+        font-size: 1.3rem;
+        margin-top: -5px;
+    }
+
+    .play {
+        width: 130px;
+        padding: 6px 10px;
+        font-size: 1rem;
+    }
+
+    .favoriteImage {
+        margin: 0 0 420px -100px;
+        width: 1.1rem;
+    }
+
+    .no-results {
+        font-size: 1.1rem;
+    }
+
+    .overlay-content {
+        margin-left: 5px;
+    }
+
+    iframe {
+        width: 270px;
+        height: 290px;
+    }
+
+    .closeBtn {
+        margin-left: 5px;
+    }
+
+    .arrow.left-arrow {
+        top: 18%;
+        padding: 2px;
+        margin-left: 15px;
+    }
+
+    .arrow.right-arrow {
+        top: 18%;
+        padding: 2px;
+        margin-left: 20px;
     }
 
     .dots {
@@ -61,7 +222,8 @@
     }
 
     .dots .dot {
-        padding: 5px;
+        padding: 2px;
+        font-size: 0.5rem;
     }
 
     .dots .dot.active {
