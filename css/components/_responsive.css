@@ -101,8 +101,13 @@
         top: 15%;
     }
 
+    .overlay a {
+        font-size: 30px;
+    }
+
     .dots .dot {
         font-size: 0.9rem;
+        margin-right: 5px;
     }
 
     .no-results {
@@ -206,13 +211,11 @@
 
     .arrow.left-arrow {
         top: 18%;
-        padding: 2px;
         margin-left: 15px;
     }
 
     .arrow.right-arrow {
         top: 18%;
-        padding: 2px;
         margin-left: 20px;
     }
 

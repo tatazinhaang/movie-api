@@ -57,7 +57,7 @@
   left: 5%;
   transform: translateY(-50%);
   color: var(--arrow-color);
-  background-color: var(--arrow-background);
+ 
   cursor: pointer;
 }
 
@@ -66,7 +66,6 @@
   transform: translateY(-50%);
   right: 5%;
   color: var(--arrow-color);
-  background-color: var(--arrow-background);
   cursor: pointer;
 }
 
