@@ -95,6 +95,7 @@
     .movie-info h3 {
         padding-left: 10px;
         font-size: 1rem;
+        touch-action: pan-y pinch-zoom;
     }
 
     .overlay-content {
@@ -233,3 +234,4 @@
         background-color: var(--button-color);
     }
 }
+

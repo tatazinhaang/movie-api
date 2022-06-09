@@ -23,15 +23,20 @@ main {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0.5rem 1rem 1rem 0;
+    padding: 0.5rem 0.5rem 1rem 0;
     color: var(--secondary-color);
     letter-spacing: 1px;
     background-color: #033f3f;
 }
 
+.movie-info:hover {
+    background: red;
+}
+
 .movie-info h3 {
     margin-top: 0;
     font-weight: 500;
+    padding-left: 5px;
 }
 
 .movie-info span {

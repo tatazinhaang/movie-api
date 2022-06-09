@@ -227,7 +227,6 @@ function showMovies(data) {
     main.appendChild(favoriteImage)
     
       document.getElementById(id).addEventListener('click', () => {
-        console.log(id)
         openNav(movie);
       });
   });
@@ -243,6 +242,7 @@ function getColor(vote) {
     return 'red';
   }
 }
+
 
 
 
