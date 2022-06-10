@@ -29,21 +29,20 @@ main {
     background-color: #033f3f;
 }
 
-.movie-info:hover {
-    background: red;
-}
-
 .movie-info h3 {
     margin-top: 0;
     font-weight: 500;
     padding-left: 5px;
+    font-size: 0.9rem;
 }
 
 .movie-info span {
-    padding: 0.25rem 0.5rem;
+    padding: 3px;
     font-weight: 500;
     border-radius: 3px;
     background-color: #1066857c;
+    font-size: 0.7rem;
+   
 }
 
 .movie-info span.green {
