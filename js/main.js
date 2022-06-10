@@ -92,8 +92,6 @@ const prev = document.getElementById('prev');
 const next = document.getElementById('next');
 const current = document.getElementById('current');
 
-const checkInput = document.querySelector('input[type="checkbox"]');
-
 let currentPage = 1;
 let nextPage = 2;
 let prevPage = 3;
@@ -224,14 +222,13 @@ function showMovies(data) {
          
     `
     main.appendChild(movieEl);
-    main.appendChild(favoriteImage)
+    main.appendChild(favoriteImage);
     
       document.getElementById(id).addEventListener('click', () => {
         openNav(movie);
       });
   });
 }
-
 
 function getColor(vote) {
   if(vote >= 8) {

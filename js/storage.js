@@ -1,4 +1,3 @@
-checkInput.addEventListener('change', checkboxStatus);
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const searchValue = search.value;
@@ -9,17 +8,6 @@ form.addEventListener('submit', (e) => {
     getMovies(apiUrl);
   }
 });
-
-function checkboxStatus() {
-  const isChecked = checkInput.checked;
-  cleanAllMovies();
-  if(isChecked) {
-    const movies = LocalStorage.getFavoriteMovies() || [];
-    movies.forEach(movie => showMovies(movie));
-  } else {
-    getMovies(apiUrl);
-  }
-}
 
 const localStorageKey = 'favoriteMovies';
 
@@ -44,7 +32,6 @@ function removeFromLocalStorage(id) {
   const findMovie = movies.find(movie => movie.id != findMovie.id);
   localStorage.setItem(localStorage, JSON.stringify(movies));
 }
-
 
 function favoriteStorage(event, movie) {
   const favoriteState = {

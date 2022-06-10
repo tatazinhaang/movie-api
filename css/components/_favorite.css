@@ -5,7 +5,3 @@
     z-index: 1;
     cursor: pointer;
 }
-
-input[type="checkbox"] {
-    display: none;
-}
